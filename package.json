@@ -2,20 +2,64 @@
   "name": "shikanoko-nokonoko-koshitantan",
   "displayName": "Shikanoko Nokonoko Koshitantan",
   "description": "Shikanoko nokonoko koshitantan",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "publisher": "KeoFoxy",
+  "homepage": "https://github.com/KeoFoxy/shikanoko-nokonoko-koshitantan",
+  "license": "MIT",
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/KeoFoxy/shikanoko-nokonoko-koshitantan"
+  },
   "engines": {
     "vscode": "^1.91.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "keywords": [
+    "shikanoko-nokonoko-koshitantan",
+    "visualization",
+    "anime",
+    "animegirl",
+    "Shikanoko",
+    "nokonoko",
+    "koshitantan",
+    "gif",
+    "meme",
+    "My Deer Friend Nokotan",
+    "しかのこのこのここしたんたん"
+  ],
+  "icon": "assets/icon.jpg",
+  "__metadata": {
+    "publisherDisplayName": "KeoFoxy"
+  },
+  "activationEvents": [
+    "onView:shikanokoNokonokoView"
+  ],
   "main": "./out/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "shikanokoNokonoko",
+          "title": "Shikanoko",
+          "icon": "assets/logo.svg"
+        }
+      ]
+    },
+    "views": {
+      "shikanokoNokonoko": [
+        {
+          "type": "webview",
+          "id": "shikanokoNokonokoView",
+          "name": "Nokonoko Koshitantan"
+        }
+      ]
+    },
     "commands": [
       {
-        "command": "shikanoko-nokonoko-koshitantan.helloWorld",
-        "title": "Hello World"
+        "command": "shikanoko-nokonoko-koshitantan.showGifView",
+        "title": "Shikanoko Nokonoko Koshitantan"
       }
     ]
   },
